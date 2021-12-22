@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="layout2.css" />
+  </head>
+  <body v-scope>
+    <!-- page -->
+    <div 
+        data-title="page" 
+        :class="[
+                {'label': label}
+                ]"
+        :style="{backgroundColor: web.page.backgroundColor.value}">
+        <!-- header -->
+        <div
+            class="pctl__container"
+            :class="[
+                {'pctl__container--inset': web.layouts.header.inset},
+                {'label': label}
+                ]"
+            :style="{backgroundColor: web.layouts.header.backgroundColor.value}"
+            data-title="layout - header"
+        >
+            <div 
+                class="grid" 
+                :class="[
+                {'label': label}
+                ]"
+                data-title="grid">
+                <div 
+                    :class="[
+                    {'label': label}
+                    ]"
+                    data-title="grid-item">grid item 1</div>
+                <div
+                    :class="[
+                    {'label': label}
+                    ]" 
+                    data-title="grid-item">grid item 2</div>
+                <div 
+                    :class="[
+                    {'label': label}
+                    ]"
+                    data-title="grid-item">grid item 3</div>
+            </div>
+        </div>
+        <!-- ./header -->
+
+
+
+        <!-- layout -->
+        <div
+            class="pctl__container"
+            :class="[
+                ('pctl__p-' + web.layouts.layout1.padding),
+                ('pctl__container--' + web.layouts.layout1.width),
+                {'label': label}
+                ]"
+            data-title="layout"
+            >
+            <div class="flex" data-title="container-flex" :class="{'label': label}">
+                <div data-title="flex-item" :class="{'label': label}">
+                    hgfhgfhghgf
+                </div>
+            </div>
+        </div>
+        <!-- ./layout -->
+
+
+
+
+    </div>
+    <!-- ./page -->
+    <div class="tools">
+        
+        <div>
+            <div class="title">TOOLS</div>
+            <div class="form-input">
+                <label>Toggle labels</label>
+                <button @click="label = !label">labels {{ label }}</button>
+            </div>
+            <div class="title">PAGE</div>
+            <div class="form-input">
+                <label>Page background</label>
+                <input
+                    :type="web.page.backgroundColor.type"
+                    v-model="web.page.backgroundColor.value"
+                />
+                <label for="head">{{ web.page.backgroundColor.value }}</label>
+            </div>
+            <div class="title">HEADER</div>
+            <div class="form-input">
+                <label>Header width</label>
+                <button @click="web.layouts.header.inset = !web.layouts.header.inset">Full / Inset</button>
+            </div>
+            <div class="form-input">
+                <label>Header background color</label>
+                <input
+                    :type="web.layouts.header.backgroundColor.type"
+                    v-model="web.layouts.header.backgroundColor.value"
+                />
+                <label for="head">{{ web.layouts.header.backgroundColor.value }}</label>
+            </div>
+            <div class="title">LAYOUT 1</div>
+            <div class="form-input">
+                <label>Width</label>
+                <!-- <button @click="web.layouts.layout1.inset = !web.layouts.layout1.inset">Full / Inset</button> -->
+                <input type="radio" value="full" v-model="web.layouts.layout1.width" />
+                Full
+                <input type="radio" value="inset" v-model="web.layouts.layout1.width" />
+                Inset
+            </div>
+            <div class="form-input">
+                <label>Padding</label>
+                <input type="radio" value="sm" v-model="web.layouts.layout1.padding" />
+                Small
+                <input type="radio" value="md" v-model="web.layouts.layout1.padding" />
+                Medium
+                <input type="radio" value="lg" v-model="web.layouts.layout1.padding" />
+                Large
+                <input type="radio" value="0" v-model="web.layouts.layout1.padding" />
+                None
+            </div>
+            
+        </div>
+        <div>
+            <pre>{{ web }}</pre>
+        </div>
+    </div>
+    
+
+    <script type="module">
+      import { createApp } from "https://unpkg.com/petite-vue?module";
+      createApp({
+          label: true,
+          web: {
+              page: {
+                  backgroundColor: {
+                    value: "#ffffff",
+                    type: "color"
+                  }
+              },
+              layouts: {
+                  header: {
+                    inset: false,
+                    backgroundColor: {
+                        value: "#ffffff00",
+                        type: "color"
+                    }
+                  },
+                  layout1: {
+                    inset: 'full',
+                    padding: "0"
+                  }
+              }
+          }
+      }).mount();
+    </script>
+  </body>
+</html>

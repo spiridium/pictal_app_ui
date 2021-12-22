@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="layout1.css">
+</head>
+<body v-scope>
+
+    <div class="pctl__container" :class="[
+    {'pctl__container--boxed': boxed},
+    {'red': red},
+    ]" data-title="boxed" :style="backgroundColor: ">
+        <div data-title="container">
+            <div class="grid" data-title="grid">
+                <div data-title="grid-item">
+                    
+                </div>
+                <div data-title="grid-item">
+                    
+                </div>
+                <div data-title="grid-item">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <button @click="boxed = !boxed">
+       toggle boxed
+    </button>
+    <button @click="red = !red">
+        toggle red 
+     </button>
+     <input type="color" id="color" name="color" :value="#e66465">
+    {{  }}
+    <script type="module">
+        import { createApp } from 'https://unpkg.com/petite-vue?module'
+        createApp({
+            boxed: false,
+            red: false,
+        }
+        ).mount()
+      </script>
+</body>
+</html>

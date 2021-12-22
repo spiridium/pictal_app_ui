@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PCTL</title>
+  </head>
+  <body v-scope>
+    <div :class="{isboxed: box}" style="border: solid red 1px;height:10px;">
+    </div>
+    <div > 
+      {{ header.backgroundColor.label }}
+      <pre>{{ header.boxed }}</pre>
+      <div v-for="item in header.boxed">
+        <input :id="item.id" :type="item.type" v-model="box" :value="item.value">
+        <label :for="item.id">{{ item.label }}</label>
+      </div>
+      
+      {{ box }}
+    </div>
+    <script type="module" src="index3.js"></script>
+  </body>
+</html>

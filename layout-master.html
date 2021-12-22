@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Master</title>
+    <link rel="stylesheet" href="layout-master.css">
+</head>
+<body>
+    <div class="page" style="--bgcolor: #ffffff">
+
+        <div class="layout-container">
+            <div class="layout">
+                asd
+            </div>
+        </div>
+
+        <div class="layout-container" style="--height: 1rem;">
+            <div class="layout" style="--width: clamp(16rem, 100vw, 1180px);">
+                <div class="part" style="--justify: center;">
+                    <div class="text-block" contenteditable="true">
+                        <h1>This is a title</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layout-container" style="--height: 10rem;">
+            <div class="layout" style="--width: clamp(16rem, 100vw, 1180px);">
+                <div class="part" style="--align: center;">
+                    <div class="text-block" contenteditable="true">
+This is a bunch of text
+                    </div>
+                </div>
+                <div class="part">
+                    <div class="image-block" style="background-image: url(img/nike.jpg);">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout-container" style="--height: 10rem;">
+            <div class="layout" style="">
+                <div class="part">
+                    <div class="image-block" style="background-image: url(img/nike.jpg);">
+                    </div>
+                </div>
+                <div class="part" style="align-items: center;">
+                    <div class="text-block" contenteditable="true">
+This is a bunch of text
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
