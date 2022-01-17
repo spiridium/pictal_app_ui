@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    :root {
+        --inset-l: 1280px;
+        --inset-m: 800px;
+        --inset-s: 72ch;
+        --device-s: 320px;
+    }
+    html,body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        width: clamp(var(--device-s), 100vw, var(--inset));
+        margin: 0 auto;
+    }
+    .inset-s {--inset: var(--inset-s)}
+    .inset-m {--inset: var(--inset-m)}
+    .inset-l {--inset: var(--inset-l)}
+
+
+    div > div {background-color: silver;min-height:400px;border:solid black 1px;margin-top: 10px;padding:20px;font-family: 'Alegreya', serif; font-size:20px}
+</style>
+<body>
+    <!-- apply a class to inset ie. inset-s, inset-m, inset-l -->
+    <div class="container inset-s">
+        <div><p>Algreya in size 20 for articles. With a 560-pixel wide article container, we end up with about 72 characters per line.</p>
+            <p>
+                Sed nec nibh id felis facilisis convallis ut sit amet augue. Nullam convallis ligula nisl. Etiam aliquam ipsum neque. Donec varius nisl ut ipsum sollicitudin, at faucibus eros sagittis. Proin volutpat lacus vitae laoreet feugiat. Fusce nec ante eget sem tempus placerat. Maecenas commodo et odio nec consectetur. Cras sodales pellentesque magna ultricies egestas. Morbi convallis massa lacus. Etiam quis euismod dolor. Suspendisse in augue lectus. Maecenas et neque est. Quisque vitae vulputate metus, vel pharetra eros. Cras vel dictum diam, id pellentesque mauris. Nulla quis magna lacus. Curabitur lacinia, lacus mollis ornare volutpat, metus magna rhoncus elit, blandit facilisis sem mauris non sapien.
+                </p>
+
+        </div>
+    </div>
+    <div class="container" style="--inset:88%">
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus turpis lorem, eget mattis lectus aliquet facilisis. Fusce id volutpat lorem. Sed accumsan enim ac felis sodales, luctus tempor eros ultricies. Nam vel nunc id elit sodales venenatis sit amet sit amet eros. Duis nisl nibh, elementum quis magna at, gravida tristique quam. In eget turpis sit amet nisi sollicitudin euismod. Etiam suscipit posuere enim ut lobortis. Ut vel dolor sem.
+                </p>
+                <p>
+                Vestibulum eros nunc, ultricies sit amet dictum in, pulvinar hendrerit est. Curabitur vitae ligula et mi feugiat dapibus sit amet eget nisi. Maecenas id viverra mi. In sem nisl, ullamcorper placerat lectus id, hendrerit imperdiet diam. Suspendisse mauris tortor, vehicula sit amet feugiat at, fermentum vel nulla. Aliquam tempor ac eros ac aliquam. Pellentesque et cursus diam, et venenatis quam. Praesent sit amet sodales tortor.
+                </p>
+
+                <p>
+                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin varius massa quis augue porttitor dictum. Suspendisse congue mauris enim, non vestibulum nisi lobortis ut. Cras venenatis libero at lobortis pellentesque. Sed ullamcorper porttitor ligula, non pretium diam. Nam at blandit purus. Sed lobortis est eget arcu ornare pretium. Curabitur vehicula lobortis turpis et porttitor. Vivamus vitae nisi eget felis suscipit pharetra. Nullam et ultricies elit, nec scelerisque nisl. Duis elementum, velit quis condimentum commodo, erat nulla lobortis libero, sit amet vestibulum risus augue eu massa. Ut vulputate id turpis ac venenatis. Donec nulla leo, rutrum sit amet metus dictum, aliquet semper nunc. Pellentesque nibh dui, sollicitudin eget mi quis, consequat varius erat. Vestibulum tincidunt pharetra gravida.
+                </p>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus turpis lorem, eget mattis lectus aliquet facilisis. Fusce id volutpat lorem. Sed accumsan enim ac felis sodales, luctus tempor eros ultricies. Nam vel nunc id elit sodales venenatis sit amet sit amet eros. Duis nisl nibh, elementum quis magna at, gravida tristique quam. In eget turpis sit amet nisi sollicitudin euismod. Etiam suscipit posuere enim ut lobortis. Ut vel dolor sem.
+            </p>
+            <p>
+            Vestibulum eros nunc, ultricies sit amet dictum in, pulvinar hendrerit est. Curabitur vitae ligula et mi feugiat dapibus sit amet eget nisi. Maecenas id viverra mi. In sem nisl, ullamcorper placerat lectus id, hendrerit imperdiet diam. Suspendisse mauris tortor, vehicula sit amet feugiat at, fermentum vel nulla. Aliquam tempor ac eros ac aliquam. Pellentesque et cursus diam, et venenatis quam. Praesent sit amet sodales tortor.
+            </p>
+            <p>
+            Sed nec nibh id felis facilisis convallis ut sit amet augue. Nullam convallis ligula nisl. Etiam aliquam ipsum neque. Donec varius nisl ut ipsum sollicitudin, at faucibus eros sagittis. Proin volutpat lacus vitae laoreet feugiat. Fusce nec ante eget sem tempus placerat. Maecenas commodo et odio nec consectetur. Cras sodales pellentesque magna ultricies egestas. Morbi convallis massa lacus. Etiam quis euismod dolor. Suspendisse in augue lectus. Maecenas et neque est. Quisque vitae vulputate metus, vel pharetra eros. Cras vel dictum diam, id pellentesque mauris. Nulla quis magna lacus. Curabitur lacinia, lacus mollis ornare volutpat, metus magna rhoncus elit, blandit facilisis sem mauris non sapien.
+            </p>
+            <p>
+            Fusce tincidunt, augue sed facilisis tincidunt, erat ex consequat lorem, pellentesque mattis purus ipsum ut dui. In fermentum mi eu lacus congue, vel porta ipsum mattis. Nunc id vehicula magna. Aenean massa libero, tristique ut cursus et, molestie at lectus. Donec eros lorem, facilisis at nisl nec, ultrices cursus ex. Curabitur consequat malesuada ipsum vehicula imperdiet. Pellentesque convallis luctus arcu, eu malesuada massa gravida eu. Ut varius ipsum augue, quis fermentum turpis convallis nec. Pellentesque sagittis dui vel aliquam semper. Proin posuere convallis lorem. Curabitur pulvinar a dolor non facilisis. Integer iaculis, felis at hendrerit vehicula, ipsum ante sollicitudin elit, id lacinia magna risus ac lacus. Ut varius tempor dolor id condimentum. Curabitur congue scelerisque elit id cursus.
+            </p>
+            <p>
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin varius massa quis augue porttitor dictum. Suspendisse congue mauris enim, non vestibulum nisi lobortis ut. Cras venenatis libero at lobortis pellentesque. Sed ullamcorper porttitor ligula, non pretium diam. Nam at blandit purus. Sed lobortis est eget arcu ornare pretium. Curabitur vehicula lobortis turpis et porttitor. Vivamus vitae nisi eget felis suscipit pharetra. Nullam et ultricies elit, nec scelerisque nisl. Duis elementum, velit quis condimentum commodo, erat nulla lobortis libero, sit amet vestibulum risus augue eu massa. Ut vulputate id turpis ac venenatis. Donec nulla leo, rutrum sit amet metus dictum, aliquet semper nunc. Pellentesque nibh dui, sollicitudin eget mi quis, consequat varius erat. Vestibulum tincidunt pharetra gravida.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

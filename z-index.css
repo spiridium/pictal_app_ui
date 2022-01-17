@@ -1,0 +1,77 @@
+:root {
+    --pctl-blue: #4F90B2;
+    --pctl-interface-black-01: #242424;
+}
+
+body {
+    margin:0;
+    background-color: var(--pctl-interface-black-01);
+    box-sizing: border-box;
+}
+.page {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.layout {
+    outline: solid transparent 1px;
+    width: 100%;
+    min-height: 200px;
+    position:relative;
+}
+.layout:hover {
+    outline: solid silver 1px;
+}
+
+.button-insert-layout {
+    width: 100%;
+    background-color:transparent;
+    height: 12px;
+    margin-top: -6px;
+    margin-bottom: -6px;
+    z-index: 2;
+    position: relative;
+}
+    .button-insert-line {
+        height: 1px;
+        width: 100%;
+        background-color: transparent;
+        position: absolute;
+        z-index: 3;
+        top: 5px;
+        /* margin: ; */
+    }
+    .button-insert {
+        display: none;
+        height: 16px;
+        width: 16px;
+        border-radius: 32px;
+        background-color: var(--pctl-blue);
+        position: relative;
+        z-index: 3;
+        margin-left: auto;
+        margin-right: auto;
+        top: -2px;
+        cursor: pointer;
+    }
+    .button-insert svg {
+        /* position: relative; */
+        /* fill: #fff; */
+
+    }
+    .button-insert-layout:hover .button-insert-line {
+        background-color: var(--pctl-blue);
+        height: 2px;
+    }
+    .button-insert-layout:hover .button-insert {
+        display:block;
+    }
+
+.fade {
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s  ease-in-out;
+}
