@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    --min-height-s: 200px;
+    --min-height-m: 600px;
+    --min-height-l: 800px;
+    --grid-gap-s: 30px;
+    --grid-gap-m: 60px;
+    --grid-gap-l: 120px;
+}
+*,:after,:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+div {
+    outline: 1px solid silver;
+}
+.min-height-s {
+    min-height: var(--min-height-s);
+}
+.min-height-m {
+    min-height: var(--min-height-m);
+}
+.min-height-l {
+    min-height: var(--min-height-l);
+}
+.inset {
+    width: clamp(16rem, 100vw, 1440px);
+}
+.full {
+    width: 100vw;
+}
+.h-align-center {
+    justify-content: center;
+}
+.v-align-center {
+    align-items: center;
+}
+.v-align-top {
+    align-items: flex-start;
+}
+.v-align-bottom {
+    align-items: flex-end;
+}
+
+.grid {
+    display: grid;
+}
+.grid-gap-s {
+    gap: var(--grid-gap-s);
+}
+.grid-gap-m {
+    gap: var(--grid-gap-m);
+}
+.grid-gap-l {
+    gap: var(--grid-gap-l);
+}
+.grid-auto {
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+}
+.grid-item {
+    display: flex;
+    min-height: var(--min-height-m)
+}
+.text-block {
+    /* padding: 1.5rem; */
+    font-size: 1.8rem;
+    width: clamp(45ch, 50%, 75ch);
+}
+.image-block {
+    flex:1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    min-height: 100%;
+}
